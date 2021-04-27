@@ -1,5 +1,4 @@
 import numpy as np
-import numba
 
 
 def sghmc_with_grad(U_grad, theta_init, M, C, V_hat, epsilon, T, m):
@@ -52,6 +51,7 @@ def sghmc_with_grad(U_grad, theta_init, M, C, V_hat, epsilon, T, m):
 
     """
     # sampling environment parameters setup
+
     d = len(theta_init)
     theta_s = np.zeros((T, d))
     r_s = np.zeros((T, d))
@@ -60,33 +60,25 @@ def sghmc_with_grad(U_grad, theta_init, M, C, V_hat, epsilon, T, m):
     B_hat = 0.5 * epsilon * V_hat
 
     if d > 1:
-        assert np.all(np.linalg.eigvals(C-B_hat) >= 0), "Check Documentation of C and update C to make sure that C - B_hat is positive semidefinite."
+        assert np.all(np.linalg.eigvals(C - B_hat) >= 0), "Check Documentation of C and update C to make sure that C - B_hat is positive semidefinite."
         assert M.shape[0] == M.shape[1], "M must be a square matrix."
         assert C.shape[0] == C.shape[1], "M must be a square matrix."
         assert V_hat.shape[0] == V_hat.shape[1], "M must be a square matrix."
         sd = np.linalg.cholesky(2 * epsilon * (C - B_hat))
         r_s = np.random.multivariate_normal(np.zeros(d), M, size=T)
     if d == 1:
-        assert C-B_hat >= 0, "Check Documentation of C and update C to make sure that C - B_hat is positive semidefinite."
+        assert C - B_hat >= 0, "Check Documentation of C and update C to make sure that C - B_hat is positive semidefinite."
         sd = np.sqrt(2 * epsilon * (C - B_hat))
         r_s = np.sqrt(M) * np.random.randn(T).reshape(T, 1)
 
-    # U_grad_vec = numba.jit(float64[:](float64[:]), nopython=True)(U_grad)
-    U_grad_jit = numba.njit(U_grad)
-
     # update parameters
-    @numba.jit(nopython=True)
-    def update(theta_s, r_s):
-        for t in range(T - 1):
-            theta0 = theta_s[t]
-            r0 = r_s[t]
-            for i in range(m):
-                theta0 = theta0 + epsilon * M_inv @ r0
-                r0 = r0 - epsilon * U_grad_jit(theta0) - epsilon * C @ M_inv @ r0 + sd @ np.random.randn(d)
-            theta_s[t + 1] = theta0
-        return theta_s
-
-    theta_s = update(theta_s, r_s)
+    for t in range(T - 1):
+        theta0 = theta_s[t]
+        r0 = r_s[t]
+        for i in range(m):
+            theta0 = theta0 + epsilon * M_inv @ r0
+            r0 = r0 - epsilon * U_grad(theta0) - epsilon * C @ M_inv @ r0 + sd @ np.random.randn(d)
+        theta_s[t + 1] = theta0
 
     return [theta_s, r_s]
 
