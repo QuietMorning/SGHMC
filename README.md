@@ -7,7 +7,7 @@ Chen, Tianqi, Emily Fox, and Carlos Guestrin. "Stochastic gradient hamiltonian m
 
 ### Contents in the repository
 
-`alg and optimizations`: contain the raw SGHMC algorithm and other relevant algorithms and functions as well as the optimizations.  
+`alg and optimization`: contain the raw SGHMC algorithm and other relevant algorithms and functions as well as the optimizations.  
 `data`: contain the data for the real-world rexamples using the developed algorithms, including the data for Bayes Neural Network Classifier application and the Airbnb dataset.  
 `src`: contains the source code for all the algorithms and gradient functions.  
 `Tests`: contains the test cases for the algorithm implementations.  
