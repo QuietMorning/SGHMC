@@ -7,13 +7,10 @@ Chen, Tianqi, Emily Fox, and Carlos Guestrin. "Stochastic gradient hamiltonian m
 
 ### Contents in the repository
 
-`Airbnb/` contains data and code for the real world application on Airbnb dataset.
-
-`Optimization/` contains code for numba optimization.
-
-`bayesnn/` contains data and code for the real world application on MNIST dataset using Bayesian Neural Network.
-
-`STA 663 First Try.ipynb` contains code for the SGHMC and relevant algorithms, as well as code for the applications of simulated data.
+notebooks: contain the raw SGHMC algorithm and other relevant algorithms and functions as well as the optimizations.  
+data: contain the data for the real-world rexamples using the developed algorithms, including the data for Bayes Neural Network Classifier application and the Airbnb dataset.  
+src: contains the source code for all the algorithms and gradient functions. 
+Tests: contains the test cases for the algorithm implementations. 
 
 [To be completed]
 
