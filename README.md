@@ -43,6 +43,8 @@ Make sure that you have `numpy` and `numba` packages installed to use this packa
 ```python 
 from maf_sghmc.alg import * 
 from maf_sghmc.grad import *
+sghmc(...)
+U_tilde(...)
 ```
 
 
