@@ -38,7 +38,7 @@ from maf_sghmc import grad
 grad.U_tilde(...)
 grad.U_grad_tilde(...)
 ```
-Make sure that you have `numpy` and `numba` packages installed to use this package freely. And you could alwasy check the documentation and other specifications of the functions using `help(alg)` or `help(grad)` once you have imported `alg` or `grad` modules from `maf_sghmc` using the command shown above. If you would like to access all the functions directly without mentioning `alg` or `grad`, you could use the following commmand. 
+**Make sure that you have `numpy` and `numba` packages installed to use this package freely.** And you could alwasy check the documentation and other specifications of the functions using `help(alg)` or `help(grad)` once you have imported `alg` or `grad` modules from `maf_sghmc` using the command shown above. If you would like to access all the functions directly without mentioning `alg` or `grad`, you could use the following commmand. 
 
 ```python 
 from maf_sghmc.alg import * 
