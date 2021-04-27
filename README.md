@@ -17,6 +17,23 @@ Chen, Tianqi, Emily Fox, and Carlos Guestrin. "Stochastic gradient hamiltonian m
 
 [To be completed]
 
+### Package Installation and Usage 
+
+The latest version (0.0.2) of the package could be installed using the command:  
+`python3 -m pip install --index-url https://test.pypi.org/simple/ --no-deps maf==0.0.2`. 
+
+Once you have installed the package, you could import the package and access the algorithms. There are four algorithms available in the package, `sghmc`, `hmc`, `sghmc_with_data`, and `sghmc_naive`. For example, you could use the following commands to use the algorithms in the package.  
+
+```
+from maf_sghmc import alg 
+alg.sghmc(...)
+alg.hmc(...)
+alg.sghmc_with_data(...)
+alg.sghmc_naive(...) 
+``` 
+
+Make sure that you have `numpy` package installed to use this package freely. And you could alwasy check the documentation and other specifications of the algorithms using `help(alg)` once you have imported `alg` from `maf_sghmc` using the command shown above.  
+
 
 ### Authors
 
