@@ -19,7 +19,7 @@ Chen, Tianqi, Emily Fox, and Carlos Guestrin. "Stochastic gradient hamiltonian m
 
 ### Package Installation and Usage 
 
-The latest version (0.0.2) of the package could be installed using the command:  
+The latest version (0.0.3) of the package could be installed using the command:  
 `python3 -m pip install --index-url https://test.pypi.org/simple/ --no-deps maf==0.0.3`. 
 
 Once you have installed the package, you could import the package and access the algorithms. There are four algorithms available in the package, `sghmc_with_grad`, `hmc`, `sghmc_with_data`, and `sghmc_naive`. For example, you could use the following commands to use the algorithms in the package.  
