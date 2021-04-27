@@ -19,7 +19,7 @@ param.num_round = 800
 param.num_hidden = 100
 
 # change the following line to PATH/TO/MNIST dataset
-param.path_data = '../../data/MNIST/'
+param.path_data = '../../../data/MNIST/'
 
 # network type
 param.net_type = 'mlp2'
