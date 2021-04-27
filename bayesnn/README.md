@@ -13,6 +13,8 @@ Instructions
 
 Running MNIST experiment
 
+* The data in this part is incomplete. Please check branch "chen" for complete data.
+
 * change the param.path_data in demo/mnist-sghmc.py to your dataset
 * python mnist-sghmc.py 2>log.txt
 * note: the evaluation statistics comes out from stderr, which is redirected into log.txt in last command
