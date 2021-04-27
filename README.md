@@ -11,6 +11,7 @@ Chen, Tianqi, Emily Fox, and Carlos Guestrin. "Stochastic gradient hamiltonian m
 `data`: contain the data for the real-world rexamples using the developed algorithms, including the data for Bayes Neural Network Classifier application and the Airbnb dataset.  
 `src`: contains the source code for all the algorithms and gradient functions.  
 `Tests`: contains the test cases for the algorithm implementations. 
+`Examples`: contains two real-world applications of the algorithm and an application on the simulated data. 
 
 [To be completed]
 
