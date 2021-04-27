@@ -26,7 +26,7 @@ Once you have installed the package, you could import the package and access the
 
 ```python
 from maf_sghmc import alg 
-alg.sghmc(...)
+alg.sghmc_with_grad(...)
 alg.hmc(...)
 alg.sghmc_with_data(...)
 alg.sghmc_naive(...) 
@@ -43,7 +43,7 @@ grad.U_grad_tilde(...)
 ```python 
 from maf_sghmc.alg import * 
 from maf_sghmc.grad import *
-sghmc(...)
+sghmc_with_grad(...)
 U_tilde(...)
 ```
 
