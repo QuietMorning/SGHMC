@@ -12,6 +12,7 @@ Chen, Tianqi, Emily Fox, and Carlos Guestrin. "Stochastic gradient hamiltonian m
 `src`: contains the source code for all the algorithms and gradient functions.  
 `Tests`: contains the test cases for the algorithm implementations.  
 `Examples`: contains two real-world applications of the algorithm and applications to the simulated data sets. 
+`Report`: contains the project report.
 
 ### Package Installation and Usage 
 
